@@ -6,7 +6,7 @@ import Photo from "./Photo";
 import { Helmet } from "react-helmet";
 import { FaRegCirclePlay } from "react-icons/fa6";
 
-function MainHome() {
+export function MainHome() {
   const youtubeVideo = {
     video:
       "https://www.youtube.com/embed/wm0TYebjyHQ?enablejsapi=1&origin=https%3A%2F%2Fwww.icrc.org",
@@ -45,7 +45,7 @@ function MainHome() {
           </div>
         </div>
       </section>
-      {/* for both photo and media .................................................................... */}
+      {/* for both photo and media ................................................... */}
       <section className="bg-[#000] w-full mx-auto py-16 ">
         <Photo />
         {/* media ............................................................................... */}
@@ -109,7 +109,7 @@ function MainHome() {
           )}
         </div>
       </section>
-      {/* work..................................................learn about us............................................ */}
+
       <section className="w-full bg-white ">
         <div className="flex flex-col w-11/12 p-10 mx-auto space-y-6 md:flex-row md:space-y-0 md:space-x-10">
           <div className="w-full">
@@ -167,7 +167,6 @@ function MainHome() {
       {/* word- map ............................................................................................. */}
       {/* <section></section> */}
 
-      {/* Earthquake deeping a humanitarina............................................................................................... */}
       <section className="relative flex overflow-hidden bg-red-700 m w-flex ull">
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-3">
           <h1 className="font-bold text-center text-white sm:text-2xl md:text-3xl lg:text-3xl drop-shadow-xl">
@@ -189,71 +188,70 @@ function MainHome() {
       </section>
       {/* ............................................................................................................................................. */}
 
-      {/* stack boxes.............................................................................................................................................. */}
-      <section className="p-6  md:p-8 bg-[#D3D3D3]">
-        <div className="flex flex-col md:flex-row">
-          {/* Left side (image) */}
-          <div className="w-full md:w-1/2">
+      <section className="p-6  md:p-24 bg-[#D3D3D3]">
+        <div className="flex ">
+          <div className="w-1/2 h-full">
             <img
-              src="https://www.icrc.org/sites/default/files/styles/home_custom_block/public/home_custom_block/image/icrc_car_in_the-field.jpeg?itok=0JxxEvq0"
-              alt="Image"
-              className="object-cover w-full h-full"
+              src="https://www.icrc.org/sites/default/files/styles/home_custom_block/public/home_custom_block/image/icrc_car_in_the-field.jpeg?itok=0JxxEvq0https://www.icrc.org/sites/default/files/styles/home_custom_block/public/home_custom_block/image/screen1.jpg?itok=HFbTuC-8https://www.icrc.org/sites/default/files/styles/special_page_image/public/donation_form/image/afghanistan_earthquake.jpg?itok=D7YWKXRT"
+              alt="pic"
             />
           </div>
-
-          {/* Right side (text) */}
-          <div className="w-full p-8 md:w-1/2 bg-[#FFFFFF]">
-            <h1 className="mb-4 text-xs font-bold md:text-2xl lg:text-4xl">
-              Leave a legacy for life beyond armed conflict
-            </h1>
-            <p className="text-sm md:text-base">
-              Remembering the ICRC in your will is really easy to do and is one
-              of the most wonderful ways you can help people caught up in armed
-              conflict. You can give back a future to people who can see no hope
-              of one right now.
-            </p>
+          <div className="w-1/2  bg-[#FFFFFF]">
+            <div className="p-16 mt-6">
+              <h1 className="text-xl font-bold ">
+                Leave a legacy for life beyond armed conflict
+              </h1>
+              <p className="mt-4 ">
+                Remembering the ICRC in your will is really easy to do, and is
+                one of the most wonderful ways you can help people caught up in
+                armed conflict. You can give back a future to people who can see
+                no hope of one right now.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-col mt-10 md:flex-row ">
-          <div className="w-full p-8 md:w-1/2  bg-[#FFFFFF]">
-            <h1 className="text-xl font-bold ">
-              Blog - Humanitarian Law & Policy
-            </h1>
-            <p className="mt-4 ">
-              A unique space for timely analysis, debate and commentary on
-              international humanitarian law issues, the policies that shape
-              humanitarian action, and the interplay between these areas.
-            </p>
+        <div className="flex mt-10">
+          <div className="w-1/2  bg-[#FFFFFF]">
+            <div className="p-16 mt-6">
+              <h1 className="text-xl font-bold ">
+                Blog - Humanitarian Law & Policy
+              </h1>
+              <p className="mt-4 ">
+                A unique space for timely analysis, debate and commentary on
+                international humanitarian law issues, the policies that shape
+                humanitarian action, and the interplay between these areas.
+              </p>
+            </div>
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-1/2 h-full">
             <img
               src="https://www.icrc.org/sites/default/files/styles/home_custom_block/public/home_custom_block/image/internal_displacement.jpg?itok=_5dU-yQFhttps://www.icrc.org/sites/default/files/styles/home_custom_block/public/home_custom_block/image/icrc_car_in_the-field.jpeg?itok=0JxxEvq0https://www.icrc.org/sites/default/files/styles/home_custom_block/public/home_custom_block/image/screen1.jpg?itok=HFbTuC-8https://www.icrc.org/sites/default/files/styles/special_page_image/public/donation_form/image/afghanistan_earthquake.jpg?itok=D7YWKXRT"
-              alt="Image"
-              className="object-cover w-full h-full"
+              alt="pic"
             />
           </div>
         </div>
         {/* .................................................................................................. */}
 
-        <div className="flex flex-col mt-10 md:flex-row ">
-          <div className="w-full md:w-1/2 ">
+        <div className="flex mt-10">
+          <div className="w-1/2 h-full">
             <img
               src="https://www.icrc.org/sites/default/files/styles/home_custom_block/public/home_custom_block/image/icrc_car_in_the-field.jpeg?itok=0JxxEvq0https://www.icrc.org/sites/default/files/styles/home_custom_block/public/home_custom_block/image/screen1.jpg?itok=HFbTuC-8https://www.icrc.org/sites/default/files/styles/special_page_image/public/donation_form/image/afghanistan_earthquake.jpg?itok=D7YWKXRT"
-              alt="Image"
-              className="object-cover w-full h-full"
+              alt="pic"
             />
           </div>
 
-          <div className="w-full p-8 md:w-1/2  bg-[#FFFFFF]">
-            <h1 className="text-xl font-bold ">From our eShop</h1>
-            <p className="mt-4 ">
-              At the end of 2016 there were more than 40 million internally
-              displaced people worldwide. This brochure explores the issue, and
-              details how the ICRC works to help people avoid displacement and
-              to address the specific needs of those displaced and their host
-              communities.
-            </p>
+          <div className="w-1/2  bg-[#FFFFFF]">
+            <div className="p-16 mt-6">
+              <h1 className="text-xl font-bold ">From our eShop</h1>
+              <p className="mt-4 ">
+                At the end of 2016 there were more than 40 million internally
+                displaced people worldwide. This brochure explores the issue,
+                and details how the ICRC works to help people avoid displacement
+                and to address the specific needs of those displaced and their
+                host communities.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -263,41 +261,3 @@ function MainHome() {
     </>
   );
 }
-
-export default MainHome;
-
-//  <section className="relative mb-10 overflow-hidden text-white bg-no-repeat h-96">
-//    <div
-//      className="absolute flex items-center justify-center w-4/5 h-full bottom-20 right-96 // "
-//      style={{
-//        backgroundImage: `url('https://www.icrc.org/sites/default/files/styles/special_page_image/public/donation_form/image/afghanistan_earthquake.jpg?itok=D7YWKXRT')`,
-//      }}
-//    ></div>
-//    <div className="w-full h-full ">
-//      <h1 className="text-white">hello word</h1>
-//    </div>
-//    <div className="bg-red-600 absolute  left-[800px] skew-x-[-20deg] w-1/2 inset-0 h-[304px]"></div>
-//  </section>;
-
-//  <div className="flex justify-center" onClick={() => setModal(true)}>
-//    <p className="cursor-pointer">▶ Play</p>
-//  </div>;
-//  {
-//    Modal && (
-//      <div className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-70">
-//        <div
-//          className="w-full max-w-screen-md p-8 bg-white rounded-lg"
-//          onClick={() => setModal(false)}
-//        >
-//          <iframe
-//            width="100%"
-//            height="100%"
-//            src={youtubeVideo.video}
-//            title="Embedded Video"
-//            frameBorder="0"
-//            allowFullScreen
-//          ></iframe>
-//        </div>
-//      </div>
-//    );
-//  }

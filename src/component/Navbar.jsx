@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <div>
-      <div>neofno</div>
+      <div className="text-red-800">neofno</div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ function Media() {
   };
   return (
     <>
-      <div className="flex w-4/5 mx-auto gap-x-4">
+      <div className="flex w-4/5 mx-auto h-96 gap-x-4">
         <div className="w-full col-span-1 text-center text-white ">
           <iframe
             width="100%"
@@ -16,13 +16,13 @@ function Media() {
             allowFullScreen
           ></iframe>
         </div>
-        <div className="w-2/5 text-center text-white ">
+        {/* <div className="w-2/5 text-center text-white ">
           <div className="w-full bg-white h-60"></div>
           <div className="flex w-full mt-3 gap-x-4">
             <div className="w-1/2 h-40 bg-white ">house</div>
             <div className="w-1/2 h-40 bg-white ">house</div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
