@@ -34,7 +34,7 @@ function MainHome() {
             className="object-cover w-full "
           />
         </div>
-        <div className="absolute">
+        <div className="fixed top-0 left-0 z-50 w-full">
           <Navbar />
         </div>
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-3 ">
@@ -46,7 +46,7 @@ function MainHome() {
         </div>
       </section>
       {/* for both photo and media .................................................................... */}
-      <section className="bg-[#000] w-full mx-auto py-16 ">
+      <section className="bg-[#000] w-full mx-auto py-16 pt-16">
         <Photo />
         {/* media ............................................................................... */}
         <div>
