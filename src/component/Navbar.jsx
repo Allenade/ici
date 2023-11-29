@@ -39,6 +39,11 @@ function Navbar() {
             SUPPORT US
           </li>
         </Link>
+        <Link to="/Donate">
+          <div className="">
+            <Button />
+          </div>
+        </Link>
       </ul>
     </div>
   );
