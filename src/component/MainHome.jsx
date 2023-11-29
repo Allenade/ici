@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Photo from "./Photo";
 import { Helmet } from "react-helmet";
 import { FaRegCirclePlay } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function MainHome() {
   const youtubeVideo = {
@@ -31,20 +32,25 @@ function MainHome() {
           <img
             src="https://www.icrc.org/sites/default/files/styles/special_page_image/public/home_carousel_slide/image/ilot_surgery_2.jpg?itok=VCxLfO6-"
             alt="pic"
-            className="object-cover w-full "
+            className="object-cover w-full"
           />
         </div>
         <div className="fixed top-0 left-0 z-50 w-full">
           <Navbar />
         </div>
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-3 ">
-          <div className="flex items-center justify-center w-full bg-black bg-opacity-75 md:mt-56 h-44 md:w-6/12">
-            <h1 className="font-bold text-center text-white sm:text-2xl md:text-3xl lg:text-3xl drop-shadow-xl">
-              Earthquake deepening a humanitarian emergency
-            </h1>
+        <Link to="/Donate">
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-3">
+            <div className="flex items-center w-full h-20 mt-20 bg-black bg-opacity-75 md:mt-0justify-center md:w-6/12 md:mt-56 md:h-44">
+              <h1 className="font-bold text-center text-white sm:text-2xl md:text-3xl lg:text-3xl drop-shadow-xl">
+                Israel and the involved domains: RCIC groups start multi-day
+                activity to rejoin prisoners and prisoners with their families,
+                convey help
+              </h1>
+            </div>
           </div>
-        </div>
+        </Link>
       </section>
+
       {/* for both photo and media .................................................................... */}
       <section className="bg-[#000] w-full mx-auto py-16 pt-16">
         <Photo />
@@ -67,15 +73,8 @@ function MainHome() {
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <section className="relative mb-10 overflow-hidden text-white bg-no-repeat h-96">
-            <div
-              className="absolute flex items-center justify-center w-4/5 h-full bottom-20 right-96 // "
-              style={{
-                backgroundImage: `url('https://www.icrc.org/sites/default/files/styles/special_page_image/public/donation_form/image/afghanistan_earthquake.jpg?itok=D7YWKXRT')`,
-              }}
-            ></div>
-            <div className="bg-red-600 absolute  left-[800px] skew-x-[-20deg] w-1/2 inset-0 h-[304px]"></div>
+            {/* ... your existing code ... */}
           </section>
-          ;
           <div
             className="flex items-center justify-center"
             onClick={() => setModal(true)}
@@ -89,13 +88,12 @@ function MainHome() {
               </p>
             </div>
           </div>
-          ;
           {Modal && (
-            <div className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-70">
-              <div
-                className="w-full max-w-screen-md p-8 bg-white rounded-lg"
-                onClick={() => setModal(false)}
-              >
+            <div
+              className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-70"
+              onClick={() => setModal(false)} // Close modal on background click
+            >
+              <div className="w-full max-w-screen-md p-8 bg-white rounded-lg">
                 <iframe
                   width="100%"
                   height="100%"
@@ -173,10 +171,11 @@ function MainHome() {
           <h1 className="font-bold text-center text-white sm:text-2xl md:text-3xl lg:text-3xl drop-shadow-xl">
             Earthquake deepening a humanitarian emergency
           </h1>
-
-          <button className="text-white bg-[#1f1e1d] text-xs md:text-md p-[1px] md:p-2 uppercase mt-6 md:mt-10">
-            DONATE TO OUR RESPONSE IN AFGHANISTAN
-          </button>
+          <Link to="/Donate">
+            <button className="text-white bg-[#1f1e1d] text-xs md:text-md p-[1px] md:p-2 uppercase mt-6 md:mt-10">
+              DONATE TO OUR RESPONSE IN AFGHANISTAN
+            </button>
+          </Link>
         </div>
         <div className="relative flex-shrink-0 w-full md:w-1/2 ">
           <img

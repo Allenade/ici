@@ -5,6 +5,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { FaTimes } from "react-icons/fa";
 import Button from "./Button";
 // import Donate from "./Donate";
+import Logo from "../image/RED R (1).jpg";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -12,7 +13,7 @@ function Navbar() {
     setClick(!click);
   };
   const content = (
-    <div className="absolute left-0 block w-full transition bg-black lg:hidden top-16">
+    <div className="absolute left-0 block w-full transition bg-black lg:hidden top-10">
       <ul className="p-20 text-xl text-center ">
         <Link spy={true} smooth={true} to="Who">
           <li className="py-4 my-4 border-b border-slate-800 hover:bg-slate-800">
@@ -49,17 +50,23 @@ function Navbar() {
   );
   return (
     <nav>
-      <div className="flex justify-between flex-1 px-20 text-white bg-black h-8vh lg:py-5">
+      <div className="flex justify-between flex-1 px-20 py-2 text-white bg-black h-10vh lg:py-5">
         <div className="flex items-center ">
-          <span className="text-3xl font-bold">Logo</span>
+          <span className="">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="object-cover w-16 h-13 md:h-20 md:w-34"
+            />
+          </span>
         </div>
-        <div className="justify-end hidden font-normal lg:flex md:flex lg: items center">
-          <div className="flex-10">
+        <div className="justify-end hidden ml-20 font-normal lg:flex md:flex lg: items center">
+          <div className=" flex-10">
             <h1>Red Cross International Community</h1>
-            <ul className="flex gap-10 py-1 text-[16px]">
+            <ul className="flex  py-1 md:gap-10 lg:text-[16px] md:text-[3px]">
               <a href="#Who">
                 <li className="transition cursor-pointer hover:text-fuchsia-600 border-slate-800 hover:bg-slate-800">
-                  WHO WE ARE
+                  <h1 className="">WHO WE ARE</h1>
                 </li>
               </a>
               <Link to="/What">

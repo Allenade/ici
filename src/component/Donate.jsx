@@ -43,6 +43,7 @@ export default function Donate() {
 
             <div className="flex flex-col gap-3 md:pt-3 md:flex-row">
               {/* Left side (image) */}
+
               <div className="w-full text-white bg-red-600 md:w-1/2">
                 <Progress />
                 <div className="flex items-center justify-center pt-3 ">
@@ -50,8 +51,8 @@ export default function Donate() {
                 </div>
                 <div className="flex items-center justify-center gap-10 pt-8 text-black">
                   <button
-                    className={`uppercase bg-${
-                      isButton ? "red-300" : "white"
+                    className={`uppercase ${
+                      isButton ? "bg-red-300" : "bg-white"
                     } text-xs md:text-md p-2 md:py-2.5 md:pl-10 md:pr-10`}
                     onClick={() => {
                       handleSingleClick();
@@ -63,6 +64,7 @@ export default function Donate() {
 
                   <button onClick={handleMonthlyClick}>Monthly</button>
                 </div>
+
                 {/* div for monthly and singlr */}
                 <div className="flex items-center justify-center">
                   {showSingleContent && (

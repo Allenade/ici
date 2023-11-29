@@ -35,7 +35,7 @@ function Photo() {
               X
             </button>
             {data.map((item) => (
-              <div key={item.id} className="w-[49%]   bg-[white] ">
+              <div key={item.id} className="md:w-[49%]  w-full  bg-[white] ">
                 <img className="" src={item.image} />
                 <div className="h-14 ">
                   <p className="text-xs text-black">{item.description}</p>
