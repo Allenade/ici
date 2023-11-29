@@ -56,7 +56,7 @@ function Navbar() {
             <img
               src={Logo}
               alt="Logo"
-              className="object-cover w-16 h-13 md:h-20 md:w-34"
+              className="object-cover w-16 h-13 md:h-20 md:w-40"
             />
           </span>
         </div>
