@@ -110,7 +110,7 @@ function MainHome() {
         </div>
       </section>
       {/* work..................................................learn about us............................................ */}
-      <section className="w-full bg-white ">
+      <section className="w-full bg-white " id="Who">
         <div className="flex flex-col w-11/12 p-10 mx-auto space-y-6 md:flex-row md:space-y-0 md:space-x-10">
           <div className="w-full">
             <h1
@@ -187,7 +187,7 @@ function MainHome() {
         </div>
         <div className="flex-shrink-0 p-5 h-80 bg-red-700 w-full md:w-[50%] transform skew-x-[-10deg] -translate-x-1/2 md:-translate-x-[5%]"></div>
       </section>
-      {/* ............................................................................................................................................. */}
+      {/* .......................................................................................   ...................................................... */}
 
       {/* stack boxes.............................................................................................................................................. */}
       <section className="p-6  md:p-8 bg-[#D3D3D3]">
