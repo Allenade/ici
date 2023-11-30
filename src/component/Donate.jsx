@@ -3,23 +3,8 @@ import { Link } from "react-router-dom";
 import Progress from "./progress";
 
 export default function Donate() {
-  const [showMonthlyContent, setShowMonthlyContent] = useState(false);
-  const [showSingleContent, setShowSingleContent] = useState(true);
-  const [isButton, setIsButton] = useState(false);
+ const [tab, setTab] = useState("single")
 
-  const handleClick = () => {
-    setIsButton(!isButton);
-  };
-
-  const handleMonthlyClick = () => {
-    setShowMonthlyContent(true);
-    setShowSingleContent(false);
-  };
-
-  const handleSingleClick = () => {
-    setShowMonthlyContent(false);
-    setShowSingleContent(true);
-  };
 
   return (
     <>
@@ -52,30 +37,30 @@ export default function Donate() {
                 <div className="flex items-center justify-center gap-10 pt-8 text-black">
                   <button
                     className={`uppercase ${
-                      isButton ? "bg-red-300" : "bg-white"
+                    tab === "single" ? "bg-white text-black" : "bg-[#c45f6d] text-[#f4f4f2]"
                     } text-xs md:text-md p-2 md:py-2.5 md:pl-10 md:pr-10`}
-                    onClick={() => {
-                      handleSingleClick();
-                      handleClick();
-                    }}
-                  >
+                    onClick={() => setTab("single")}>
                     Single
                   </button>
 
-                  <button onClick={handleMonthlyClick}>Monthly</button>
+                  <button
+                    className={`uppercase ${
+                    tab === "monthly" ? "bg-white text-black" : "bg-[#c45f6d] text-[#f4f4f2]"
+                    } text-xs md:text-md p-2 md:py-2.5 md:pl-10 md:pr-10`}
+                    onClick={() => setTab("monthly")}>Monthly</button>
                 </div>
 
                 {/* div for monthly and singlr */}
                 <div className="flex items-center justify-center">
-                  {showSingleContent && (
+                  {tab === "single" && (
                     <div>
                       {/* Content for Single */}
                       <p>This is the content for Single.</p>
                     </div>
                   )}
-                  {showMonthlyContent && (
+                  {tab === "monthly" && (
                     <div>
-                      <h1>hojusej</h1>
+                      <h1>This is the content for monthly</h1>
                     </div>
                   )}
                 </div>
