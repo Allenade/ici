@@ -9,7 +9,7 @@ const Progress = () => {
       setRaisedAmount((prevAmount) =>
         prevAmount < targetAmount ? prevAmount + 1000 : prevAmount
       );
-    }, 900000); // 60000 milliseconds = 1 minute
+    }, 30000); // 60000 milliseconds = 1 minute
 
     return () => clearInterval(interval);
   }, []);
