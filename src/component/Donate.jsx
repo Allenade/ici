@@ -9,7 +9,7 @@ import Form from "./Form";
 
 export default function Donate() {
   const [tab, setTab] = useState("single");
-  const [address, setAddress] = useState("lets try something");
+  // const [address, setAddress] = useState("lets try something");
   // const [network, setNetwork] = useState("eth");
   // const [invalidAddress, setInvalidAddress] = useState(false);
   const [network, setNetwork] = useState("");

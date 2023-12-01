@@ -5,7 +5,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { FaTimes } from "react-icons/fa";
 import Button from "./Button";
 // import Donate from "./Donate";
-import Logo from "../image/RED R (1).jpg";
+import Logo from "../image/RED.jpg";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -56,7 +56,7 @@ function Navbar() {
             <img
               src={Logo}
               alt="Logo"
-              className="object-cover w-16 h-13 md:h-20 md:w-40"
+              className="object-contain w-16 h-13 md:h-20 md:w-40"
             />
           </span>
         </div>
