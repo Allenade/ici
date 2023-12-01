@@ -1,11 +1,35 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Progress from "./progress";
+import Form from "./Form";
+// import New from "./New";
+// import WAValidator, {
+//   isValidAddress,
+// } from "multicoin-address-validator/dist/wallet-address-validator";
 
 export default function Donate() {
- const [tab, setTab] = useState("single")
+  const [tab, setTab] = useState("single");
+  const [address, setAddress] = useState("lets try something");
+  // const [network, setNetwork] = useState("eth");
+  // const [invalidAddress, setInvalidAddress] = useState(false);
+  const [network, setNetwork] = useState("");
 
+  const changeNetwork = (e) => {
+    setNetwork(e.target.value);
+  };
+  // const changeAddress = (e) => {
+  //   let address = e.target.value;
+  //   let isValiAddress = WAValidator.validate(address, network);
+  //   setAddress(isValiAddress);
+  //   setInvalidAddress(!isValidAddress);
+  // };
+  // const changeNetwork = (e) => {
+  //   let network = e.target.value;
+  //   let isValiAddress = WAValidator.validate(address, network);
+  //   setInvalidAddress(!isValidAddress);
 
+  //   setNetwork(network);
+  // };
   return (
     <>
       <div className="relative">
@@ -29,7 +53,7 @@ export default function Donate() {
             <div className="flex flex-col gap-3 md:pt-3 md:flex-row">
               {/* Left side (image) */}
 
-              <div className="w-full text-white bg-red-600 md:w-1/2">
+              <div className="w-full h-screen text-white bg-red-600 md:w-1/2">
                 <Progress />
                 <div className="flex items-center justify-center pt-3 ">
                   <h1>Give to the ICRC</h1>
@@ -37,17 +61,25 @@ export default function Donate() {
                 <div className="flex items-center justify-center gap-10 pt-8 text-black">
                   <button
                     className={`uppercase ${
-                    tab === "single" ? "bg-white text-black" : "bg-[#c45f6d] text-[#f4f4f2]"
+                      tab === "single"
+                        ? "bg-white text-black"
+                        : "bg-[#c45f6d] text-[#f4f4f2]"
                     } text-xs md:text-md p-2 md:py-2.5 md:pl-10 md:pr-10`}
-                    onClick={() => setTab("single")}>
+                    onClick={() => setTab("single")}
+                  >
                     Single
                   </button>
 
                   <button
                     className={`uppercase ${
-                    tab === "monthly" ? "bg-white text-black" : "bg-[#c45f6d] text-[#f4f4f2]"
+                      tab === "monthly"
+                        ? "bg-white text-black"
+                        : "bg-[#c45f6d] text-[#f4f4f2]"
                     } text-xs md:text-md p-2 md:py-2.5 md:pl-10 md:pr-10`}
-                    onClick={() => setTab("monthly")}>Monthly</button>
+                    onClick={() => setTab("monthly")}
+                  >
+                    Monthly
+                  </button>
                 </div>
 
                 {/* div for monthly and singlr */}
@@ -55,7 +87,10 @@ export default function Donate() {
                   {tab === "single" && (
                     <div>
                       {/* Content for Single */}
-                      <p>This is the content for Single.</p>
+                      <p>jihfifiwi</p>
+                      <Form network={network} changeNetwork={changeNetwork} />
+
+                      {/* <New invalidAddress={invalidAddress} address={address} /> */}
                     </div>
                   )}
                   {tab === "monthly" && (
