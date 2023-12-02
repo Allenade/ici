@@ -6,16 +6,7 @@ export default function Form({ network, changeNetwork }) {
 
   const btcAddress = "bc1qfp4drfj5aj6dtv4sywqskj6tuuf4tt677yjhqm"; // Replace with the actual BTC address
   const ethAddress = "0xbD613E9AF5d86A0566565B4bd7053Cf1969ECFAD"; // Replace with the actual ETH address
-  const xrpAddress = "0xbD613E9AF5d86A0566565B4bd7053Cf1969ECFAD"; // Replace with the actual XRP address
-
-  const copyToClipboard = (text) => {
-    const textarea = document.createElement("textarea");
-    textarea.value = text;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textarea);
-  };
+  const usdtAddress = "0xbD613E9AF5d86A0566565B4bd7053Cf1969ECFAD"; // Replace with the actual USDT address
 
   const handleCopyClick = (e) => {
     e.preventDefault();
@@ -25,8 +16,8 @@ export default function Form({ network, changeNetwork }) {
         ? btcAddress
         : network === "eth"
         ? ethAddress
-        : network === "xrp"
-        ? xrpAddress
+        : network === "usdt" // Change from "xrp" to "usdt"
+        ? usdtAddress
         : "";
 
     copyToClipboard(selectedAddress);
@@ -37,62 +28,70 @@ export default function Form({ network, changeNetwork }) {
     alert("Address copied to clipboard!");
   };
 
+  const copyToClipboard = (text) => {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+  };
+
   return (
-    <div className="bg-black">
-      <h2>Crypto Address QR-code</h2>
-      <form>
-        <select className="bg-black" value={network} onChange={changeNetwork}>
-          <option hidden disabled value="" className="bg-black">
+    <div className="p-4 bg-white">
+      <h2 className="mb-4 text-xl font-semibold text-black">
+        Crypto Address QR-code
+      </h2>
+      <form className="flex flex-col space-y-4">
+        <select
+          className="p-2 text-black border-b border-white"
+          value={network}
+          onChange={changeNetwork}
+        >
+          <option hidden disabled value="">
             Select Crypto Address
           </option>
           <option value="btc">Bitcoin (BTC)</option>
           <option value="eth">Ethereum (ETH)</option>
-          <option value="xrp">Ripple (XRP)</option>
+          <option value="usdt">USDT (USDT)</option>
         </select>
+
         <input
           type="text"
-          className="p-2 mt-2 text-white bg-black border-b border-white"
+          className="p-2 text-white bg-black border-b border-white"
           value={
             network === "btc"
               ? btcAddress
               : network === "eth"
               ? ethAddress
-              : network === "xrp"
-              ? xrpAddress
+              : network === "usdt"
+              ? usdtAddress
               : "Wallet Address"
           }
           readOnly
-          //   placeholder={
-          //     network === "btc"
-          //       ? "BTC_ADDRESS_HERE"
-          //       : network === "eth"
-          //       ? "ETH_ADDRESS_HERE"
-          //       : network === "xrp"
-          //       ? "XRP_ADDRESS_HERE"
-          //       : "Wallet Address"
-          //   }
-        />
-        <QRCode
-          value={
-            network === "btc"
-              ? btcAddress
-              : network === "eth"
-              ? ethAddress
-              : network === "xrp"
-              ? xrpAddress
-              : ""
-          }
         />
         <button
-          className="p-2 text-white bg-blue-500 rounded"
+          className="p-1 text-white bg-blue-500 rounded"
           onClick={handleCopyClick}
         >
           Copy Address
         </button>
+        <div className="flex items-center justify-center">
+          {network && (
+            <QRCode
+              value={
+                network === "btc"
+                  ? btcAddress
+                  : network === "eth"
+                  ? ethAddress
+                  : network === "usdt"
+                  ? usdtAddress
+                  : ""
+              }
+            />
+          )}
+        </div>
       </form>
-      {/* <div>
-        {address && <p>Selected Address: {address}</p>}
-      </div> */}
     </div>
   );
 }

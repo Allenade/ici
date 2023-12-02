@@ -9,9 +9,7 @@ import Form from "./Form";
 
 export default function Donate() {
   const [tab, setTab] = useState("single");
-  // const [address, setAddress] = useState("lets try something");
-  // const [network, setNetwork] = useState("eth");
-  // const [invalidAddress, setInvalidAddress] = useState(false);
+
   const [network, setNetwork] = useState("");
 
   const changeNetwork = (e) => {
@@ -53,7 +51,7 @@ export default function Donate() {
             <div className="flex flex-col gap-3 md:pt-3 md:flex-row">
               {/* Left side (image) */}
 
-              <div className="w-full h-screen text-white bg-red-600 md:w-1/2">
+              <div className="w-full text-white bg-red-600 h-[800px] md:h-screen md:pb-4 md:w-1/2">
                 <Progress />
                 <div className="flex items-center justify-center pt-3 ">
                   <h1>Give to the ICRC</h1>
@@ -85,24 +83,67 @@ export default function Donate() {
                 {/* div for monthly and singlr */}
                 <div className="flex items-center justify-center">
                   {tab === "single" && (
-                    <div>
+                    <div className="">
                       {/* Content for Single */}
-                      <p>jihfifiwi</p>
-                      <Form network={network} changeNetwork={changeNetwork} />
+                      <div className="flex flex-col mt-4 md:flex-row md:gap-x-10 gap-y-2 ">
+                        <div className="w-full p-2 text-center text-white transition bg-[#c45f6d] rounded-md cursor-pointer md:w-20 hover:bg-white hover:text-black">
+                          <span className="text-base font-semibold">$90</span>
+                        </div>
+                        <div className="w-full p-2 text-center text-white transition bg-[#c45f6d] rounded-md cursor-pointer md:w-20 hover:bg-white hover:text-black">
+                          <span className="text-base font-semibold">$140</span>
+                        </div>
+                        <div className="w-full p-2 text-center text-white transition bg-[#c45f6d] rounded-md cursor-pointer md:w-20 hover:bg-white hover:text-black">
+                          <span className="text-base font-semibold">$200</span>
+                        </div>
+                        <div className="w-full p-2 text-center text-white transition bg-[#c45f6d] rounded-md cursor-pointer md:w-20 hover:bg-white hover:text-black">
+                          <span className="text-base font-semibold">
+                            $Other
+                          </span>
+                        </div>
+                      </div>
+                      <div className="mt-4">
+                        <Form network={network} changeNetwork={changeNetwork} />
+                      </div>
 
                       {/* <New invalidAddress={invalidAddress} address={address} /> */}
                     </div>
                   )}
                   {tab === "monthly" && (
-                    <div>
-                      <h1>This is the content for monthly</h1>
+                    <div className="">
+                      {/* <div className="flex items-center justify-center p-4 border border-black border-opacity-25 rounded-md md:w-1/2">
+                        <h2 className="font-semibold text-white ">
+                          A regular donation enables us to rapidly swing into
+                          action in crisis situations and deliver aid where it
+                          is needed most. Thank you!
+                        </h2>
+                      </div> */}
+                      <div className="flex flex-col mt-4 md:flex-row md:gap-x-10 gap-y-2 ">
+                        <div className="w-full p-2 text-center text-white transition bg-[#c45f6d] rounded-md cursor-pointer md:w-20 hover:bg-white hover:text-black">
+                          <span className="text-base font-semibold">$15 </span>
+                        </div>
+                        <div className="w-full p-2 text-center text-white transition bg-[#c45f6d] rounded-md cursor-pointer md:w-20 hover:bg-white hover:text-black">
+                          <span className="text-base font-semibold">$30</span>
+                        </div>
+                        <div className="w-full p-2 text-center text-white transition bg-[#c45f6d] rounded-md cursor-pointer md:w-20 hover:bg-white hover:text-black">
+                          <span className="text-base font-semibold">$60</span>
+                        </div>
+                        <div className="w-full p-2 text-center text-white transition bg-[#c45f6d] rounded-md cursor-pointer md:w-20 hover:bg-white hover:text-black">
+                          <span className="text-base font-semibold">
+                            $Other
+                          </span>
+                        </div>
+                      </div>
+                      <div className="mt-4">
+                        <Form network={network} changeNetwork={changeNetwork} />
+                      </div>
+                      {/* <New invalidAddress={invalidAddress} address={address} /> */}
                     </div>
                   )}
                 </div>
               </div>
 
               {/* Right side (text) */}
-              <div className="w-full  p-8  md:w-1/2 bg-[#FFFFFF]">
+              <div className="w-full hidden md:block   md:w-1/2 bg-[#FFFFFF]">
                 <h1 className="mb-4 text-xs font-bold md:text-2xl lg:text-4xl">
                   Leave a legacy for life beyond armed conflict
                 </h1>
@@ -118,7 +159,7 @@ export default function Donate() {
         </div>
 
         {/* Rest of the Page */}
-        <section className="relative h-screen p-8 text-white bg-black">
+        <section className="relative h-[1000px] p-8 text-white bg-black">
           <div className="absolute mb-4 text-2xl font-bold transform -translate-y-1/2">
             Remaining Content
           </div>
