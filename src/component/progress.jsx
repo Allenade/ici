@@ -1,7 +1,10 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const Progress = () => {
-  const targetAmount = 2000000; // $100,000
+  const targetAmount = 2000000; // $2,000,000
+  const intervalDuration = 7000; // 7000 milliseconds = 7 seconds
+  const restartDelay = 5000; // 5000 milliseconds = 5 seconds
+
   const [raisedAmount, setRaisedAmount] = useState(() => {
     // Retrieve the value from local storage, or use 0 if not present
     const storedAmount = localStorage.getItem("raisedAmount");
@@ -9,14 +12,24 @@ const Progress = () => {
   });
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setRaisedAmount((prevAmount) =>
-        prevAmount < targetAmount ? prevAmount + 10000 : prevAmount
-      );
-    }, 7000); // 60000 milliseconds = 1 minute
+    const updateProgress = () => {
+      setRaisedAmount((prevAmount) => {
+        if (prevAmount < targetAmount) {
+          return prevAmount + 100;
+        } else {
+          // Wait for the restart delay and then reset raisedAmount to 0
+          setTimeout(() => {
+            setRaisedAmount(0);
+          }, restartDelay);
+          return prevAmount;
+        }
+      });
+    };
+
+    const interval = setInterval(updateProgress, intervalDuration);
 
     return () => clearInterval(interval);
-  }, [targetAmount]);
+  }, [targetAmount, intervalDuration, restartDelay]);
 
   useEffect(() => {
     // Save the raisedAmount to local storage whenever it changes
