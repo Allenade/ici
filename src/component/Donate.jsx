@@ -102,7 +102,7 @@ export default function Donate() {
               </div>
 
               {/* Right side (text) */}
-              <div className="w-full p-8  md:w-1/2 bg-[#FFFFFF]">
+              <div className="w-full  p-8  md:w-1/2 bg-[#FFFFFF]">
                 <h1 className="mb-4 text-xs font-bold md:text-2xl lg:text-4xl">
                   Leave a legacy for life beyond armed conflict
                 </h1>

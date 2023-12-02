@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const Progress = () => {
-  const targetAmount = 100000; // $100,000
+  const targetAmount = 2000000; // $100,000
   const [raisedAmount, setRaisedAmount] = useState(() => {
     // Retrieve the value from local storage, or use 0 if not present
     const storedAmount = localStorage.getItem("raisedAmount");
@@ -11,9 +11,9 @@ const Progress = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setRaisedAmount((prevAmount) =>
-        prevAmount < targetAmount ? prevAmount + 1000 : prevAmount
+        prevAmount < targetAmount ? prevAmount + 10000 : prevAmount
       );
-    }, 60000); // 60000 milliseconds = 1 minute
+    }, 7000); // 60000 milliseconds = 1 minute
 
     return () => clearInterval(interval);
   }, [targetAmount]);
