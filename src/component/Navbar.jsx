@@ -42,11 +42,11 @@ function Navbar() {
             SUPPORT US
           </li>
         </a> */}
-        <Link to="/Donate">
+        {/* <Link to="/Donate">
           <div className="">
             <Button />
           </div>
-        </Link>
+        </Link> */}
       </ul>
     </div>
   );
@@ -61,6 +61,11 @@ function Navbar() {
               className="object-contain w-16 h-13 md:h-20 md:w-40"
             />
           </span>
+          <Link to="/Donate">
+            <div className="flex items-center justify-center mt-2 ml-14">
+              <Button />
+            </div>
+          </Link>
         </div>
         <div className="justify-end hidden ml-20 font-normal lg:flex md:flex lg: items center">
           <div className=" flex-10">
