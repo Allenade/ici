@@ -182,7 +182,7 @@ export default function Donate() {
         </div>
 
         {/* Rest of the Page */}
-        <section className="relative p-8 text-white h-[660px] bg-black md:h-[610px]">
+        <section className="relative p-8 text-white h-[790px]	 bg-black md:h-[610px]">
           <div className="absolute mb-4 text-2xl font-bold transform -translate-y-1/2">
             Remaining Content
           </div>
