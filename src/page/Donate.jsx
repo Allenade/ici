@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Progress from "./progress";
-import Form from "./Form";
+import Progress from "../component/progress";
+import Form from "../component/Form";
 // import New from "./New";
 // import WAValidator, {
 //   isValidAddress,

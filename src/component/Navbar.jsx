@@ -13,7 +13,7 @@ function Navbar() {
     setClick(!click);
   };
   const content = (
-    <div className="absolute left-0 block w-full transition bg-black lg:hidden top-10">
+    <div className="absolute left-0 block w-full transition bg-black lg:hidden top-[71px]">
       <ul className="p-20 text-xl text-center ">
         <Link spy={true} smooth={true} to="Who">
           <li className="py-4 my-4 border-b border-slate-800 hover:bg-slate-800">
@@ -51,7 +51,7 @@ function Navbar() {
   return (
     <nav>
       <div className="flex justify-between flex-1 px-20 py-2 text-white bg-black h-10vh lg:py-5">
-        <div className="flex items-center ">
+        <div className="flex md:items-center">
           <span className="">
             <img
               src={Logo}

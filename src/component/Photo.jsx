@@ -55,7 +55,7 @@ function Photo() {
               </p>
             </div>
           </div>
-          <div className="w-full text-white bg-white h-[270px] md:h-[270px]">
+          <div className="w-full mt-4 md:mt-0 text-white bg-white h-[270px] md:h-[270px]">
             {/* Bottom right div content */}
             <img
               src="https://www.icrc.org/sites/default/files/styles/special_page_image/public/document_new/image/hospital_0.jpg?itok=49bdSDLg"

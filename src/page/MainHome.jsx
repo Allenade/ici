@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Footer from "./Footer";
-import Media from "./Media";
-import Navbar from "./Navbar";
-import Photo from "./Photo";
+import Footer from "../component/Footer";
+import Media from "../component/Media";
+import Navbar from "../component/Navbar";
+import Photo from "../component/Photo";
 import { Helmet } from "react-helmet";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -28,11 +28,11 @@ function MainHome() {
       </Helmet>
 
       <section className="relative flex flex-col w-full overflow-hidden">
-        <div className="relative flex-shrink-0 w-full">
+        <div className="relative flex-shrink-0 w-full md:h-full">
           <img
             src="https://www.icrc.org/sites/default/files/styles/special_page_image/public/home_carousel_slide/image/ilot_surgery_2.jpg?itok=VCxLfO6-"
             alt="pic"
-            className="object-cover w-full"
+            className="object-cover w-full h-[500px] md:h-full"
           />
         </div>
         <div className="fixed top-0 left-0 z-50 w-full">
