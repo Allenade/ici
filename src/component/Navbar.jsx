@@ -52,7 +52,7 @@ function Navbar() {
   );
   return (
     <nav>
-      <div className="flex justify-between flex-1 px-20 py-2 text-white bg-black h-10vh lg:py-5">
+      <div className="flex justify-between flex-1 md:px-20 px-[14px]  py-2 text-white bg-black h-10vh lg:py-5">
         <div className="flex md:items-center">
           <span className="">
             <img
@@ -72,7 +72,7 @@ function Navbar() {
             <h1>Red Cross International Community</h1>
             <ul className="flex  py-1 md:gap-10 lg:text-[16px] md:text-[3px]">
               <ScrollLink to="Who" spy={true} smooth={true}>
-                <li className="transition cursor-pointer hover:text-fuchsia-600 border-slate-800 hover:bg-slate-800">
+                <li className="transition cursor-pointer md:w-full hover:text-fuchsia-600 border-slate-800 hover:bg-slate-800">
                   <h1 className="">WHO WE ARE</h1>
                 </li>
               </ScrollLink>

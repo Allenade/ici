@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const Progress = () => {
-  const targetAmount = 1000000000; // $2,000,000
+  const targetAmount = 100000000; // $2,000,000
   const intervalDuration = 7000; // 7000 milliseconds = 7 seconds
   const restartDelay = 5000; // 5000 milliseconds = 5 seconds
 

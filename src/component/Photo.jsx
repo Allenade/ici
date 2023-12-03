@@ -5,7 +5,7 @@ function Photo() {
 
   return (
     <>
-      <div className="w-4/5 mx-auto space-y-4 ">
+      <div className="mx-auto space-y-4 w-[370px] md:w-4/5 ">
         <div className="col-span-1 text-white bg-white ">
           {/* Top div content */}
           <img

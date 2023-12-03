@@ -53,7 +53,7 @@ export default function Form({ network, changeNetwork }) {
           </option>
           <option value="btc">Bitcoin (BTC)</option>
           <option value="eth">Ethereum (ETH)</option>
-          <option value="usdt">USDT (USDT)</option>
+          <option value="usdt">USDT (Erc20)</option>
         </select>
 
         <input
