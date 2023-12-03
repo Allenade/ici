@@ -51,8 +51,10 @@ export default function Donate() {
             <div className="flex flex-col gap-3 md:pt-3 md:flex-row">
               {/* Left side (image) */}
 
-              <div className="w-full text-white bg-red-600 h-[800px] md:h-screen md:pb-4 md:w-1/2">
-                <Progress />
+              <div className="w-full pb-4 text-white bg-red-600 md:h-fit md:pb-4 md:w-1/2">
+                <div className="pt-7">
+                  <Progress />
+                </div>
                 <div className="flex items-center justify-center pt-3 ">
                   <h1>Give to the ICRC</h1>
                 </div>
@@ -143,23 +145,44 @@ export default function Donate() {
               </div>
 
               {/* Right side (text) */}
-              <div className="w-full hidden md:block   md:w-1/2 bg-[#FFFFFF]">
-                <h1 className="mb-4 text-xs font-bold md:text-2xl lg:text-4xl">
-                  Leave a legacy for life beyond armed conflict
-                </h1>
-                <p className="text-sm md:text-base">
-                  Remembering the ICRC in your will is really easy to do and is
-                  one of the most wonderful ways you can help people caught up
-                  in armed conflict. You can give back a future to people who
-                  can see no hope of one right now.
-                </p>
+              <div className="hidden w-full md:block md:w-1/2 ">
+                <div className="w-64 p-2 text-white bg-red-600 h-fit">
+                  <h1 className="text-4xl font-bold ">A gift of hope </h1>
+                </div>
+                <div className="mt-14">
+                  <h3 className="p-4 text-sm font-bold text-white md:text-base">
+                    We live in a war-torn world, where millions of people have
+                    their lives destroyed by conflict.
+                  </h3>
+                  <h3 className="p-4 text-sm font-bold text-white md:text-base">
+                    Amid the chaos and despair, the International Committee of
+                    the Red Cross is a unique sign of hope to those whose lives
+                    have been changed forever.
+                  </h3>
+                  <h3 className="p-4 text-sm font-bold text-white md:text-base">
+                    The ICRC strives to bring humanity to the most challenging
+                    and dangerous situations. We do so in close collaboration
+                    with and in support of our partners in the Red Cross and Red
+                    Crescent Movement.
+                  </h3>
+                  <h3 className="p-4 text-2xl font-bold text-white md:text-base">
+                    But as the pressure on our resources continues to grow, we
+                    need more funds to help the increasing number of men, women
+                    and children around the world who find themselves caught in
+                    the crossfire of conflict and other crises.
+                  </h3>
+                  <h3 className="p-4 text-sm font-bold text-white md:text-base">
+                    YOUR DONATION GOES WHERE IT IS NEEDED MOST. 93.5% of your
+                    donation will go to fund our operations for people in need.
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Rest of the Page */}
-        <section className="relative h-[1000px] p-8 text-white bg-black">
+        <section className="relative p-8 text-white h-[660px] bg-black md:h-[610px]">
           <div className="absolute mb-4 text-2xl font-bold transform -translate-y-1/2">
             Remaining Content
           </div>

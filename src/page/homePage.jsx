@@ -1,4 +1,4 @@
-import MainHome from "./MainHome";
+import MainHome from "../component/MainHome";
 function HomePage() {
   return (
     <div className="w-full">

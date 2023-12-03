@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Footer from "../component/Footer";
-import Media from "../component/Media";
-import Navbar from "../component/Navbar";
-import Photo from "../component/Photo";
+import Footer from "./Footer";
+import Media from "./Media";
+import Navbar from "./Navbar";
+import Photo from "./Photo";
 import { Helmet } from "react-helmet";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -52,7 +52,7 @@ function MainHome() {
       </section>
 
       {/* for both photo and media .................................................................... */}
-      <section className="bg-[#000] w-full mx-auto py-16 pt-16">
+      <section className="bg-[#000] w-full mx-auto py-16 pt-16" id="War">
         <Photo />
         {/* media ............................................................................... */}
         <div>
@@ -63,7 +63,7 @@ function MainHome() {
           <Media />
         </div>
       </section>
-      <section className="relative w-full text-white ">
+      <section className="relative w-full text-white " id="What">
         <div className="relative flex-shrink-0 w-full ">
           <img
             src="https://www.icrc.org/sites/default/files/styles/special_page_image/public/homepage_files/icrc-car-syria_1.jpg?itok=sydI4NeT"
@@ -166,7 +166,7 @@ function MainHome() {
       {/* <section></section> */}
 
       {/* Earthquake deeping a humanitarina............................................................................................... */}
-      <section className="relative flex overflow-hidden bg-red-700 m w-flex ull">
+      <section className="relative flex overflow-hidden bg-red-700 m w-flex ">
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-3">
           <h1 className="font-bold text-center text-white sm:text-2xl md:text-3xl lg:text-3xl drop-shadow-xl">
             Earthquake deepening a humanitarian emergency
@@ -189,7 +189,7 @@ function MainHome() {
       {/* .......................................................................................   ...................................................... */}
 
       {/* stack boxes.............................................................................................................................................. */}
-      <section className="p-6  md:p-8 bg-[#D3D3D3]">
+      <section className="p-6  md:p-8 bg-[#D3D3D3]" id="Where">
         <div className="flex flex-col md:flex-row">
           {/* Left side (image) */}
           <div className="w-full md:w-1/2">

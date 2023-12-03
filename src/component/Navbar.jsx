@@ -5,6 +5,8 @@ import { CiMenuFries } from "react-icons/ci";
 import { FaTimes } from "react-icons/fa";
 import Button from "./Button";
 // import Donate from "./Donate";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+
 import Logo from "../image/RED.jpg";
 
 function Navbar() {
@@ -15,31 +17,31 @@ function Navbar() {
   const content = (
     <div className="absolute left-0 block w-full transition bg-black lg:hidden top-[71px]">
       <ul className="p-20 text-xl text-center ">
-        <Link spy={true} smooth={true} to="Who">
+        <ScrollLink to="Who" spy={true} smooth={true}>
           <li className="py-4 my-4 border-b border-slate-800 hover:bg-slate-800">
             WHO WE ARE
           </li>
-        </Link>
-        <Link spy={true} smooth={true} to="What">
+        </ScrollLink>
+        <ScrollLink to="What" spy={true} smooth={true}>
           <li className="py-4 my-4 border-b border-slate-800 hover:bg-slate-800">
             WHAT WE DO
           </li>
-        </Link>
-        <Link spy={true} smooth={true} to="Where">
+        </ScrollLink>
+        <ScrollLink to="Where" spy={true} smooth={true}>
           <li className="py-4 my-4 border-b border-slate-800 hover:bg-slate-800">
             WHERE WE WORK
           </li>
-        </Link>
-        <Link spy={true} smooth={true} to="War">
+        </ScrollLink>
+        <ScrollLink to="War" spy={true} smooth={true}>
           <li className="py-4 my-4 border-b border-slate-800 hover:bg-slate-800">
             WAR & LAW
           </li>
-        </Link>
-        <Link spy={true} smooth={true} to="Support">
+        </ScrollLink>
+        {/* <a href="#Support">
           <li className="py-4 my-4 border-b border-slate-800 hover:bg-slate-800">
             SUPPORT US
           </li>
-        </Link>
+        </a> */}
         <Link to="/Donate">
           <div className="">
             <Button />
@@ -64,31 +66,35 @@ function Navbar() {
           <div className=" flex-10">
             <h1>Red Cross International Community</h1>
             <ul className="flex  py-1 md:gap-10 lg:text-[16px] md:text-[3px]">
-              <a href="#Who">
+              <ScrollLink to="Who" spy={true} smooth={true}>
                 <li className="transition cursor-pointer hover:text-fuchsia-600 border-slate-800 hover:bg-slate-800">
                   <h1 className="">WHO WE ARE</h1>
                 </li>
-              </a>
-              <Link to="/What">
-                <li className="transition cursor-pointer border-slate-800 hover:bg-slate-800">
+              </ScrollLink>
+              <ScrollLink to="What" spy={true} smooth={true}>
+                <li className="transition cursor-pointer hover:text-fuchsia-600 border-slate-800 hover:bg-slate-800">
                   WHAT WE DO
                 </li>
-              </Link>
-              <Link spy={true} smooth={true} to="Where">
-                <li className="transition cursor-pointer border-slate-800 hover:bg-slate-800">
+              </ScrollLink>
+              <ScrollLink to="Where" spy={true} smooth={true}>
+                <li className="transition cursor-pointer hover:text-fuchsia-600 border-slate-800 hover:bg-slate-800">
                   WHERE WE WORK
                 </li>
-              </Link>
-              <Link spy={true} smooth={true} to="/war">
-                <li className="transition cursor-pointer border-slate-800 hover:bg-slate-800">
+              </ScrollLink>
+              {/* <a href="#Where">
+                <li className="transition cursor-pointer border-slate-800 hover:bg-slate-800"></li>
+              </a> */}
+              <ScrollLink to="War" spy={true} smooth={true}>
+                <li className="transition cursor-pointer hover:text-fuchsia-600 border-slate-800 hover:bg-slate-800">
                   WAR & LAW
                 </li>
-              </Link>
-              <Link spy={true} smooth={true} to="Support">
+              </ScrollLink>
+
+              {/* <Link spy={true} smooth={true} to="Support">
                 <li className="transition cursor-pointer border-slate-800 hover:bg-slate-800">
                   SUPPORT
                 </li>
-              </Link>
+              </Link> */}
               <Link to="/Donate">
                 <div className="ml-40">
                   <Button />
