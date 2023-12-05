@@ -66,7 +66,7 @@ function Navbar() {
           </span>
         </div>
         <Link to="/Donate">
-          <div className="block md:hidden">
+          <div className="block ml-36 md:hidden">
             <Button />
           </div>
         </Link>

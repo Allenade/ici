@@ -42,7 +42,7 @@ function MainHome() {
               alt="Logo"
               className="object-contain w-20 ml-3 h-13 md:h-20 md:w-20"
             />
-            <h1 className="px-4 py-3">
+            <h1 className="px-4 py-3 bg-gray-100">
               Red Cross International <br /> Community
             </h1>
           </div>
