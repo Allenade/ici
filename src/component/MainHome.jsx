@@ -36,12 +36,16 @@ function MainHome() {
           />
         </div>
         <div className="absolute w-full md:hidden block h-[95px]  top-[56px]  bg-white">
-          <h1 className="px-4 py-3">Red Cross International Community</h1>
-          <img
-            src={Logo}
-            alt="Logo"
-            className="object-contain w-12 ml-3 h-13 md:h-20 md:w-20"
-          />
+          <div className="flex   mt-[15px]">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="object-contain w-20 ml-3 h-13 md:h-20 md:w-20"
+            />
+            <h1 className="px-4 py-3">
+              Red Cross International <br /> Community
+            </h1>
+          </div>
         </div>
         <div className="fixed top-0 left-0 z-50 w-full">
           <Navbar />
